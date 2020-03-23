@@ -1,1 +1,1 @@
-https://sun9-72.userapi.com/pfBVMSk0cX_WYlIDe2omm6EfHGk2-kMKgyP1HQ/ACJhk7UgGVQ.jpg
+https://vk.com/im?peers=342960766_133123749_c89&sel=209786349&z=photo209786349_457256969%2Fmail1743748
