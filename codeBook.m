@@ -1,12 +1,13 @@
 function codes = codeBook(k, gX)
-r = length(gX) - 1;
-n = k + r;
+r = length(gX) - 1; % длина избыточной части CRC
+n = k + r; % длина кодового слова
 
-R = 2^r;
-K = 2^k;
+R = 2^r; % количество кодовых слов
+K = 2^k; % количество векторов ошибок
 
 codes = zeros(K, n);
 
+% кодирование 
 for m = 0 : K - 1
    m_xK = de2bi(m*R, n);
    m_xK = m_xK(end:-1:1); %мл.б на свое место
