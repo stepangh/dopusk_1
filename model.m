@@ -8,19 +8,19 @@ PeBit = 0;
 PED = 0;
 
 for i = 1 : N
-    %     Источник
-    indexCode = randi([1 K],1,1);%генерация индекса код. слова
-    %     CRC-r
+    % Источник
+    indexCode = randi([1 K],1,1); % генерация индекса код. слова
+    % CRC-r
     mX = codes(indexCode, :); % берём код. слово по индексу из код. книжки
-    %     BPSK
+    % BPSK
     mS = mX.*-2 + 1;
     
-    %     АБГШ
+    % АБГШ
     mR = mS + sigma * randn(1, n);
     
-    %     BPSK ^-1
+    % BPSK ^-1
     mX_ = mR < 0;
-    %     CRC-r ^-1
+    % CRC-r ^-1
     flag_sum = sum(xor(mX_, mX)); 
     
     PED = PED + (flag_sum > 0 & sum(modGx(mX_, gX)) == 0); 
